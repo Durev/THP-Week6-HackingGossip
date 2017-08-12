@@ -1,2 +1,8 @@
-<h1>Gossips#new</h1>
-<p>Find me in app/views/gossips/new.html.erb</p>
+<h1>New gossips</h1>
+
+<h3>Add a gossip :</h3>
+
+<%= simple_form_for @gossip do |f| %>
+
+	<%= f.input :content %>
+<% end %>

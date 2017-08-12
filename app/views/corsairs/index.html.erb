@@ -1,0 +1,18 @@
+<h1>Corsairs</h1>
+
+<h3>New corsair :</h3>
+<%= simple_form_for @corsair do |f| %>
+	<%= f.input :username, label: 'Enter the new corsair username', error: "You know that field cant' be blank" %>
+	<%= f.button :submit %>
+<% end %>
+
+<hr>
+<h3>List of corsairs</h3>
+<ul>
+	<% @corsairs.each do |corsair| %>
+		<li>
+			<%= corsair.username %>
+		</li>
+	<% end %>
+
+</ul>
