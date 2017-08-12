@@ -1,3 +1,11 @@
 <h1>Index</h1>
 
-<p>Here is the home page with all the gossips</p>
+<h3>All the gossips :</h3>
+
+<ul>
+	<% @gossips.each do |gossip| %>
+		<li>
+			<%= gossip.content %>  <em> - by <%= Corsair.find(gossip.corsair_id).username %></em>
+		</li>
+	<% end %>
+</ul>
