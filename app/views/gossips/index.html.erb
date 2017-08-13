@@ -2,10 +2,8 @@
 
 <h3>All the gossips :</h3>
 
-<ul>
-	<% @gossips.each do |gossip| %>
-		<li>
-			<%= gossip.content %>  <em> - by <%= Corsair.find(gossip.corsair_id).username %></em>
-		</li>
-	<% end %>
-</ul>
+<hr>
+<% @gossips.each do |gossip| %>
+	<%= gossip.content %>  <em> - by <%= Corsair.find(gossip.corsair_id).username %></em>
+	<hr>
+<% end %>

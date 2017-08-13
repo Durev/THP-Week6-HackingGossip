@@ -10,7 +10,7 @@ class CorsairsController < ApplicationController
   	if @corsair.save
   		redirect_to corsairs_path
   	else
-  		render 'new'
+  		render 'corsairs#index'
   	end
   end
 

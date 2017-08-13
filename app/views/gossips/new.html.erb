@@ -4,5 +4,8 @@
 
 <%= simple_form_for @gossip do |f| %>
 
+	<%= f.association :corsair, label_method: :username %>
 	<%= f.input :content %>
+	<%= f.button :submit %>
+
 <% end %>
